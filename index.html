@@ -1,0 +1,53 @@
+ Experiment Steps:
+ Step 1: Cloning a Repository
+ ● Signin to your GitHub account.
+ ● Find a repository to clone (you can use a repository of your own or any public
+ repository).
+ ● Click the "Code" button and copy the repository URL.
+ ● Openyourterminal or command prompt.
+ ● Navigate to the directory where you want to clone the repository.
+ ● Runthefollowing command:
+ git clone <repository_url>
+ ● Replace <repository_url> with the URL you copied from GitHub.
+ ● Thiswill clone the repository to your local machine.
+ Step 2: Making Changes and Creating a Branch
+ Navigate into the cloned repository:
+ cd <repository_name>
+ ● Create a new text file named "example.txt" using a text editor.
+ ● Addsomecontent to the "example.txt" file.
+ ● Savethefile and return to the command line.
+ ● Checkthe status of the repository:
+ git status
+ ● Stagethe changes for commit:
+ git add example.txt
+ ● Commit the changes with a descriptive message:
+ 9
+git commit-m "Add content to example.txt"
+ ● Create a new branch named "feature":
+ git branch feature
+ ● Switch to the "feature" branch:
+ git checkout feature
+ Step 3: Pushing Changes to GitHub
+ ● AddRepository URL in a variable
+ git remote add origin <repository_url>
+ ● Replace <repository_url> with the URL you copied from GitHub.
+ ● Pushthe"feature" branch to GitHub:
+ git push origin feature
+ ● Checkyour GitHub repository to confirm that the new branch "feature" is available.
+ Step 4: Collaborating through Pull Requests
+ ● Create a pull request on GitHub:
+ ● Gototherepository on GitHub.
+ ● Click on "Pull Requests" and then "New Pull Request."
+ ● Choose the base branch (usually "main" or "master") and the compare branch
+ ("feature").
+ ● Reviewthe changes and click "Create Pull Request."
+ ● Reviewand merge the pull request:
+ ● Addatitle and description for the pull request.
+ ● Assign reviewers if needed.
+ ● Oncethepull request is approved, merge it into the base branch.
+ Step 5: Syncing Changes
+ ● After the pull request is merged, update your local repository:
+ git checkout main
+ git pull origin main
+ Conclusion:
+ This experiment provided you with practical experience in performing Gi
