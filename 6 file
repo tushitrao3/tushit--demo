@@ -1,1 +1,42 @@
-
+ Experiment Steps:
+ Step 1: Install Docker
+ ● If you haven't already, install Docker on your computer by following the instructions
+ provided on the Docker website (https://docs.docker.com/get-docker/).
+ Step 2: Create a Simple HTML Page
+ ● Create a directory for your web server project.
+ ● Inside this directory, create a file named index.html with a simple "Hello, Docker!"
+ message. This will be the content served by your Apache web server.
+ Step 3: Create a Dockerfile
+ ● Create a Dockerfile in the same directory as your web server project. The Dockerfile
+ defines how your Apache web server application will be packaged into a Docker
+ container. Here's an
+ ● example:
+ Dockerfile
+ # Use an official Apache image as the base image
+ FROMhttpd:2.4
+ # Copy your custom HTML page to the web server's document root
+ COPYindex.html /usr/local/apache2/htdocs/
+ Step 4: Build the Docker Image
+ ● Build the Docker image by running the following command in the same directory as
+ your Dockerfile:
+ docker build-t my-apache-server .
+ ● Replace my-apache-server with a suitable name for your image.
+ 25
+Step 5: Run the Docker Container
+ Start a Docker container from the image you built:
+ docker run-p 8080:80-d my-apache-server
+ ● This command maps port 80 in the container to port 8080 on your host machine and
+ runs the container in detached mode.
+ Step 6: Access Your Apache Web Server
+ Access your Apache web server by opening a web browser and navigating to
+ http://localhost:8080. You should see the "Hello, Docker!" message served by your Apache
+ web server running within the Docker container.
+ Step 7: Cleanup
+ Stop the running Docker container:
+ docker stop <container_id>
+ ● Replace <container_id> with the actual ID of your running container.
+ ● Optionally, remove the container and the Docker image:
+ docker rm <container_id>
+ docker rmi my-apache-server
+ Conclusion:
+ In this experiment, you explored containerization and application deployme
