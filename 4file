@@ -1,0 +1,55 @@
+ Experiment Steps:
+ Step 1: Creating a Repository
+ ● Signin to your Bitbucket account.
+ ● Click the "Create" button to create a new repository.
+ ● Choosearepository name, visibility (public or private), and other settings.
+ ● Click "Create repository."
+ Step 2: Cloning a Repository
+ ● Openyourterminal or command prompt.
+ ● Navigate to the directory where you want to clone the repository.
+ ● Copytherepository URL from Bitbucket.
+ ● Runthefollowing command:
+ git clone <repository_url>
+ ● Replace <repository_url> with the URL you copied from Bitbucket.
+ ● Thiswill clone the repository to your local machine.
+ Step 3: Making Changes and Creating a Branch
+ ● Navigate into the cloned repository:
+ cd <repository_name>
+ ● Create a new text file named "example.txt" using a text editor.
+ ● Addsomecontent to the "example.txt" file.
+ ● Savethefile and return to the command line.
+ ● Checkthe status of the repository:
+ git status
+ ● Stagethe changes for commit:
+ git add example.txt
+ ● Commit the changes with a descriptive message:
+ 17
+git commit-m "Add content to example.txt"
+ ● Create a new branch named "feature":
+ git branch feature
+ ● Switch to the "feature" branch:
+ git checkout feature
+ Step 4: Pushing Changes to Bitbucket
+ ● AddRepository URL in a variable
+ git remote add origin <repository_url>
+ ● Replace <repository_url> with the URL you copied from Bitbucket.
+ ● Pushthe"feature" branch to Bitbucket:
+ git push origin feature
+ ● Checkyour Bitbucket repository to confirm that the new branch "feature" is available.
+ Step 5: Collaborating through Pull Requests
+ 1. Create a pull request on Bitbucket:
+ ○ Gototherepository on Bitbucket.
+ ○ Click on "Create pull request."
+ ○ Choose the source branch ("feature") and the target branch ("main" or
+ "master").
+ ○ Reviewthe changes and click "Create pull request."
+ 2. Review and merge the pull request:
+ ○ Addatitle and description for the pull request.
+ ○ Assign reviewers if needed.
+ ○ Oncethepull request is approved, merge it into the target branch.
+ Step 6: Syncing Changes
+ ● After the pull request is merged, update your local repository:
+ git checkout main
+ git pull origin main
+ Conclusion:
+ This experiment provided you with practical 
