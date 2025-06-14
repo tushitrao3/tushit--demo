@@ -1,0 +1,54 @@
+ Step 1: Creating a Repository
+ ● Signin to your GitLab account.
+ ● Click the "New" button to create a new project.
+ ● Chooseaproject name, visibility level (public, private), and other settings.
+ ● Click "Create project."
+ Step 2: Cloning a Repository
+ ● Openyourterminal or command prompt.
+ ● Navigate to the directory where you want to clone the repository.
+ ● Copytherepository URL from GitLab.
+ ● Runthefollowing command:
+ git clone <repository_url>
+ ● Replace <repository_url> with the URL you copied from GitLab.
+ ● Thiswill clone the repository to your local machine.
+ Step 3: Making Changes and Creating a Branch
+ ● Navigate into the cloned repository:
+ cd <repository_name>
+ ● Create a new text file named "example.txt" using a text editor.
+ ● Addsomecontent to the "example.txt" file.
+ ● Savethefile and return to the command line.
+ ● Checkthe status of the repository:
+ git status
+ 13
+● Stagethe changes for commit:
+ git add example.txt
+ ● Commit the changes with a descriptive message:
+ git commit-m "Add content to example.txt"
+ ● Create a new branch named "feature":
+ git branch feature
+ ● Switch to the "feature" branch:
+ git checkout feature
+ Step 4: Pushing Changes to GitLab
+ ● AddRepository URL in a variable
+ git remote add origin <repository_url>
+ ● Replace <repository_url> with the URL you copied from GitLab.
+ ● Pushthe"feature" branch to GitLab:
+ git push origin feature
+ ● Checkyour GitLab repository to confirm that the new branch "feature" is available.
+ Step 5: Collaborating through Merge Requests
+ 1. Create a merge request on GitLab:
+ ○ Gototherepository on GitLab.
+ ○ Click on "Merge Requests" and then "New Merge Request."
+ ○ Choose the source branch ("feature") and the target branch ("main" or
+ "master").
+ ○ Reviewthe changes and click "Submit merge request."
+ 2. Review and merge the merge request:
+ ○ Addatitle and description for the merge request.
+ ○ Assign reviewers if needed.
+ ○ Oncethemerge request is approved, merge it into the target branch.
+ Step 6: Syncing Changes
+ ● After the merge request is merged, update your local repository:
+ git checkout main
+ git pull origin main
+ Conclusion:
+ This experiment provided you with practical experience in performing GitLab op
